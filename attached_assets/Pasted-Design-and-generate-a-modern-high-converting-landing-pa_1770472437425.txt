@@ -1,0 +1,114 @@
+Design and generate a modern, high-converting landing page for a creative video services brand called “Fidelio.” (include the full stop in the brand name everywhere).
+
+The landing page is for a business offering videography, video editing, and performance-driven ad creatives for brands and creators. The goal of the page is to convert visitors into booked calls or leads.
+
+Use a clean, bold, premium aesthetic inspired by modern creative agencies. Structure the page similarly to high-performing creative service sites like Decimalabs (agency-style layout, clear sections, strong CTAs).
+
+PAGE SECTIONS (MUST INCLUDE):
+
+1. Hero Section (Above the Fold)
+
+Full-width layout with a dark, cinematic feel.
+
+Headline (main offer):
+“Fidelio. — From Raw Footage to Scroll-Stopping Ads That Convert.”
+
+Subheadline:
+“Short-form video editing, ad creatives, and visual storytelling built for performance.”
+
+Primary CTA button: “Book a Call”
+
+Secondary CTA button: “View Plans”
+
+Optional background video or animated visuals.
+
+2. Services Section
+Display a grid of services with short descriptions:
+
+Performance Ad Creatives (Meta, TikTok, YouTube)
+
+Short-Form Video Editing
+
+Videography & Content Capture
+
+Motion Graphics & Text Animations
+
+UGC & Social Media Edits
+
+Static Ad Creatives & End Cards
+
+3. How It Works
+A simple 3-step process:
+
+Submit your footage and brief
+
+We edit, optimise, and iterate
+
+You publish and scale
+
+4. Pricing Section
+Create a pricing table with three tiers:
+
+Starter
+
+Growth
+
+Pro
+
+Each plan should list included features and a clear CTA button like “Get Started” or “Book a Call.”
+
+5. Testimonials / Social Proof
+Include testimonial cards with placeholder quotes such as:
+“Fidelio helped us turn raw clips into ads that actually convert.”
+Include space for client names and brands.
+
+6. FAQ Section
+Accordion-style FAQs answering:
+
+What do I need to get started?
+
+How fast is delivery?
+
+How do revisions work?
+
+Is there a contract or can I cancel anytime?
+
+7. Final Call to Action
+A bold closing section encouraging users to book a call:
+“Ready to turn your content into conversions?”
+CTA button: “Book Your Call”
+
+8. Footer
+Include:
+
+Brand name: Fidelio.
+
+Social media links
+
+Contact email
+
+Legal links
+
+DESIGN & TECH REQUIREMENTS:
+
+Responsive and mobile-first
+
+Modern typography
+
+High-contrast CTA buttons
+
+Clean spacing and layout
+
+Use HTML, CSS, and JavaScript
+
+Tailwind CSS preferred (or clean custom CSS)
+
+Smooth hover effects and subtle animations
+
+SEO:
+
+Meta title: “Fidelio. — Video Editing & Ad Creatives That Convert”
+
+Meta description focused on conversion-driven video services
+
+Generate the full working code for the landing page, clearly commented by section.

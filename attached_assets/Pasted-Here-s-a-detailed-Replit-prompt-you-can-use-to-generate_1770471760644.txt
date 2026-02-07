@@ -1,0 +1,169 @@
+Here’s a **detailed Replit prompt** you can use to generate a strong, conversion-focused landing page called **Fidelio.** This is inspired by the structure and content of the **Decimalabs** website you shared (which offers performance-driven video creatives, short-form editing services, ad creatives, pricing plans, testimonials, FAQs, etc.). ([decimalabs.com][1])
+
+---
+
+## ✅ **Replit AI Prompt — Landing Page Builder (Fidelio.)**
+
+> **Create a responsive, modern landing page for a videography + video editing + ad creatives service brand named “Fidelio.”**
+> The page must be high-converting, clearly communicate the offer, and include these major sections:
+
+---
+
+### **1. Hero (Above the Fold)**
+
+* Full-width background video or image of dynamic editing timelines or social video reels.
+* **Compelling headline (primary):**
+
+  ```
+  "Fidelio. — From Raw Footage to Scroll-Stopping Ads That Convert"
+  ```
+* **Subheadline (supports value):**
+
+  ```
+  "Short-form video editing, ad creatives & performance-driven storytelling for brands that scale."
+  ```
+* **Primary CTA Button:**
+  `Get Started — Book a Call`
+* Secondary CTA:
+  `See Plans`
+
+*(Focus on instant clarity: what you do + who it’s for + strong call to action.)*
+
+---
+
+### **2. What We Do / Services**
+
+Create a **services grid** with icons or thumbnails and short descriptions:
+
+* **Performance Ad Creatives**
+  “High-impact ads optimised for Facebook, TikTok & YouTube.”
+* **Short-Form Video Editing**
+  “Turn raw clips into polished, engaging content.”
+* **Motion Graphics & Text Animations**
+* **UGC & Social Storytelling Edits**
+* **Static Ads & End Card Design**
+  Keep icons consistent and clear. ([decimalabs.com][2])
+
+---
+
+### **3. How It Works**
+
+A 3-step visual process section:
+
+1. **Submit Your Footage** – Upload raw video, assets & brief
+2. **We Edit & Optimise** – Fast turnaround with revisions
+3. **Launch & Convert** – Polished assets ready to publish
+
+Use simple illustrations and brief copy.
+
+---
+
+### **4. Pricing Plans**
+
+Present your pricing clearly in a **pricing table** with three tiers:
+
+* **Starter**
+  Best for beginners or single video edits.
+* **Growth**
+  Multi-video packages + basic strategy support.
+* **Pro / Agency**
+  Unlimited edits + dedicated manager + optimisation support.
+
+Include monthly prices and feature checkmarks. ([decimalabs.com][2])
+
+---
+
+### **5. Testimonials / Social Proof**
+
+Add real-looking quotes (or placeholders your copywriter can fill in):
+
+> “Fidelio transformed our reels into ads that actually sell — insane turnaround times.”
+> — *Brand name*
+> Also include small headshots or logos.
+
+---
+
+### **6. FAQs**
+
+Add accordion-style FAQs to answer common concerns:
+
+* What do I need to start?
+* How do revisions work?
+* Delivery times?
+* Cancel anytime?
+
+Reflect Decimalabs’ FAQ style and tone. ([decimalabs.com][2])
+
+---
+
+### **7. Footer**
+
+Include:
+
+* Social icons
+* Contact / email
+* Legal links
+
+---
+
+### **Design Requirements**
+
+✔ Modern, bold typography
+✔ High contrast CTAs
+✔ Clean section spacing
+✔ Light & dark accents for clarity
+✔ Mobile-friendly & SEO optimised
+
+---
+
+### **Code Output**
+
+Your reply should generate full **HTML, CSS, and JS** (if needed) with comments for each section, including:
+
+* Responsive layout using **Flexbox or Grid**
+* **Tailwind CSS** or custom CSS
+* Hero animation/video background
+* Buttons with hover effects
+* Form button linked to Calendly / email modal
+
+---
+
+### **Example HTML Structure to Generate**
+
+```
+<header> … Hero … </header>
+<section id="services"> … </section>
+<section id="how-it-works"> … </section>
+<section id="pricing"> … </section>
+<section id="testimonials"> … </section>
+<section id="faq"> … </section>
+<footer> … </footer>
+```
+
+---
+
+### **SEO & Analytics**
+
+Add:
+
+* Meta title: “Fidelio. — Video Editing & Ad Creatives That Convert”
+* Meta description focused on conversions
+* GA4 / tracking snippet placeholder
+
+---
+
+## 🚀 Suggested Primary Tagline Variants
+
+Pick one for the hero section:
+
+✅ **“From Footage to Fame — We Edit. You Convert.”**
+✅ **“Scroll-Stopping Edits Built for Growth.”**
+✅ **“Performance-Driven Video & Ad Creatives That Sell.”**
+✅ **“Your Story. Our Edit. Their Click.”**
+
+---
+
+If you’d like, I can generate the **ready-to-use code** (HTML + CSS + JS) for this landing page too — just tell me if you want a **light or dark theme**!
+
+[1]: https://www.decimalabs.com/?utm_source=chatgpt.com "DecimaLabs"
+[2]: https://decimalabs.com/ "DecimaLabs"
