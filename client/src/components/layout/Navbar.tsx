@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/">
           <a className="text-2xl font-bold tracking-tighter font-display">
-            Fidelio<span className="text-primary">.</span>
+            fidelio<span className="text-primary">.</span>
           </a>
         </Link>
 

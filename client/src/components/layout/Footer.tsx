@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <Link href="/">
               <a className="text-2xl font-bold tracking-tighter font-display mb-2 block">
-                Fidelio<span className="text-primary">.</span>
+                fidelio<span className="text-primary">.</span>
               </a>
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Fidelio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} fidelio. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

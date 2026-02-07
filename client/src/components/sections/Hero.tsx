@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] font-display">
-            From Raw Footage to <br className="hidden md:block" />
+            fidelio<span className="text-primary">.</span> — From Raw Footage to <br className="hidden md:block" />
             <span className="text-white">Scroll-Stopping Ads</span> That <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Convert</span>.
           </h1>
 
