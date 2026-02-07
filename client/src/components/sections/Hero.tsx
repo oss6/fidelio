@@ -37,9 +37,23 @@ export default function Hero() {
             <span className="text-sm font-medium text-muted-foreground">Accepting new clients for Q1</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] font-display">
-            fidelio<span className="text-primary">.</span> — From Raw Footage to <br className="hidden md:block" />
-            <span className="text-white">Scroll-Stopping Ads</span> That <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Convert</span>.
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-[1.1] font-display">
+            Where{" "}
+            <span className="relative inline-block group cursor-default">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 transition-all duration-300 group-hover:from-blue-300 group-hover:to-cyan-200">
+                Content
+              </span>
+              <span className="absolute -bottom-2 left-0 w-0 h-1 bg-blue-400/50 transition-all duration-500 group-hover:w-full" />
+            </span>{" "}
+            Meets{" "}
+            <br className="hidden md:block" />
+            <span className="relative inline-block group cursor-default">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400 transition-all duration-300 group-hover:from-primary/80 group-hover:to-purple-300">
+                Conversion
+              </span>
+              <span className="absolute -bottom-2 left-0 w-0 h-1 bg-primary/50 transition-all duration-500 group-hover:w-full" />
+            </span>
+            .
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
