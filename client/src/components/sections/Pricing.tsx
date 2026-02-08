@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Growth",
-    description: "Multi-video packages + basic strategy support.",
+    description: "Multi-video packages + strategy support.",
     price: "$2,497",
     period: "/mo",
     features: [
@@ -35,13 +35,13 @@ const plans = [
   },
   {
     name: "Pro / Agency",
-    description: "Unlimited edits + dedicated manager + optimisation.",
+    description: "Unlimited edits + dedicated manager.",
     price: "Custom",
     period: "",
     features: [
       "Unlimited Video Requests",
       "Dedicated Creative Strategist",
-      "Native Ad Performance Analysis",
+      "Performance Analysis",
       "Priority Queue",
       "Raw Footage Guidance",
       "White Label Available",
@@ -57,56 +57,53 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-background">
-      <div className="container px-4 mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">Simple Pricing</h2>
-          <p className="text-muted-foreground text-lg">
+    <section id="pricing" className="py-32 bg-white">
+      <div className="container px-6 mx-auto">
+        <div className="mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-black">Investment</h2>
+          <p className="text-[#737373] text-xl max-w-2xl leading-relaxed">
             Scale your content production without the overhead of hiring an in-house team.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#E5E4E2]">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl border p-8 flex flex-col h-full ${
-                plan.popular
-                  ? "bg-card border-primary/50 shadow-2xl shadow-primary/10 transform md:-translate-y-4"
-                  : "bg-background border-white/10"
+              className={`p-10 flex flex-col h-full border-r last:border-r-0 border-[#E5E4E2] ${
+                plan.popular ? "bg-[#F5F4F2]" : "bg-white"
               }`}
             >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-sm font-bold rounded-full uppercase tracking-wider">
-                  Most Popular
+              <div className="mb-12">
+                <div className="flex justify-between items-start mb-6">
+                  <h3 className="text-2xl font-bold text-black">{plan.name}</h3>
+                  {plan.popular && (
+                    <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-black text-white rounded">
+                      Popular
+                    </span>
+                  )}
                 </div>
-              )}
-
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold font-display mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm h-10">{plan.description}</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-5xl font-bold text-black">{plan.price}</span>
+                  <span className="text-[#737373] text-sm">{plan.period}</span>
+                </div>
               </div>
 
-              <div className="mb-8">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-muted-foreground">{plan.period}</span>
-              </div>
-
-              <ul className="space-y-4 mb-8 flex-1">
+              <ul className="space-y-4 mb-12 flex-1">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
+                    <Check className="w-4 h-4 text-black shrink-0 mt-1" />
+                    <span className="text-sm text-[#737373] leading-tight">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               <Button
                 onClick={scrollToContact}
-                className={`w-full h-12 rounded-full font-bold ${
+                className={`w-full h-14 rounded-full font-bold text-base transition-all ${
                   plan.popular
-                    ? "bg-primary hover:bg-primary/90 text-white"
-                    : "bg-white/10 hover:bg-white/20 text-white"
+                    ? "bg-black text-white hover:opacity-80"
+                    : "bg-transparent border border-black text-black hover:bg-black hover:text-white"
                 }`}
               >
                 {plan.cta}

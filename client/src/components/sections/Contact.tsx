@@ -41,69 +41,78 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-secondary/20 relative overflow-hidden">
-      {/* Abstract Background Element */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-20" />
-      
-      <div className="container px-4 mx-auto max-w-4xl relative z-10">
-        <div className="bg-card/30 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to scale your ads?</h2>
-            <p className="text-muted-foreground">
-              Book a call with our team to discuss your creative strategy.
+    <section id="contact" className="py-32 bg-[#F5F4F2]">
+      <div className="container px-6 mx-auto max-w-5xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div>
+            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-black leading-none">Ready to Scale?</h2>
+            <p className="text-[#737373] text-xl leading-relaxed mb-10">
+              Book a discovery call to discuss your creative strategy and how we can turn your content into a conversion engine.
             </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-black font-bold">
+                <div className="w-2 h-2 rounded-full bg-black" />
+                24h Response Time
+              </div>
+              <div className="flex items-center gap-4 text-black font-bold">
+                <div className="w-2 h-2 rounded-full bg-black" />
+                Global Clients
+              </div>
+            </div>
           </div>
 
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 max-w-lg mx-auto">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="John Doe" {...field} className="bg-background/50 border-white/10 h-12" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input placeholder="john@brand.com" {...field} className="bg-background/50 border-white/10 h-12" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>How can we help?</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Tell us about your brand and content needs..." 
-                        className="bg-background/50 border-white/10 min-h-[120px]" 
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button type="submit" size="lg" className="w-full h-12 rounded-full text-lg bg-primary hover:bg-primary/90 font-bold">
-                Book Your Call
-              </Button>
-            </form>
-          </Form>
+          <div className="bg-white border border-[#E5E4E2] rounded-2xl p-8 md:p-12">
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-colors" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-colors" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Message</FormLabel>
+                      <FormControl>
+                        <Textarea 
+                          placeholder="Tell us about your needs..." 
+                          className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 min-h-[100px] focus-visible:ring-0 focus-visible:border-black transition-colors resize-none" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-black hover:opacity-80 text-white font-bold transition-all">
+                  Book Your Call
+                </Button>
+              </form>
+            </Form>
+          </div>
         </div>
       </div>
     </section>

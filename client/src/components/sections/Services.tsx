@@ -1,12 +1,11 @@
 import { 
-  Clapperboard, 
-  Scissors, 
   Zap, 
-  Users, 
+  Scissors, 
   Palette, 
-  MonitorPlay 
+  Users, 
+  MonitorPlay, 
+  Clapperboard 
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
   {
@@ -43,32 +42,31 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-background relative">
-      <div className="container px-4 mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">
-            Built for <span className="text-primary">Growth</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            We don't just edit videos. We build creative assets designed to lower your CPA and scale your ad spend.
-          </p>
+    <section id="services" className="py-32 bg-white border-y border-[#E5E4E2]">
+      <div className="container px-6 mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-black">Our Expertise</h2>
+            <p className="text-[#737373] text-xl leading-relaxed">
+              We don't just edit videos. We build creative assets designed to lower your CPA and scale your ad spend.
+            </p>
+          </div>
+          <div className="hidden md:block text-right">
+            <div className="text-6xl font-bold text-[#E5E4E2]">01</div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-[#E5E4E2]">
           {services.map((service, index) => (
-            <Card key={index} className="bg-card/50 border-white/5 hover:border-primary/50 transition-colors duration-300 group">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl font-bold font-display">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+            <div key={index} className="p-10 border-r border-b border-[#E5E4E2] group hover:bg-[#F5F4F2] transition-colors">
+              <div className="w-12 h-12 rounded-full border border-[#E5E4E2] flex items-center justify-center mb-8 group-hover:border-black transition-colors">
+                <service.icon className="w-5 h-5 text-black" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-black">{service.title}</h3>
+              <p className="text-[#737373] leading-relaxed">
+                {service.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

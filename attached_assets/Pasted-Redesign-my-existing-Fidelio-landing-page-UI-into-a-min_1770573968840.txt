@@ -1,0 +1,98 @@
+Redesign my existing Fidelio landing page UI into a minimalist “paper” aesthetic inspired by modern editorial and art-gallery websites.
+
+Design goals:
+
+Replace the dark gradient SaaS theme with a light, off-white paper background (#F5F4F2 or similar)
+
+Use subtle grain/noise texture overlay to simulate paper
+
+Minimal color palette: black, warm gray, and 1–2 soft abstract accent colors (muted orange, blue, or purple blobs)
+
+Large abstract organic gradient shapes in the hero section (like modern mental health / music landing pages)
+
+Lots of whitespace and breathing room
+
+Flat design (no heavy shadows, no glassmorphism, no neon gradients)
+
+Typography:
+
+Headline font: bold modern grotesk or serif (similar to Inter, Space Grotesk, or Neue Haas)
+
+Body text: clean sans-serif
+
+Hero headline very large and left-aligned
+
+Black or very dark gray text on off-white background
+
+Hero section layout:
+
+Left side: big headline text
+Example style:
+“Where Content Meets Conversion”
+
+Smaller subheading underneath in light gray
+
+Right side or center: large abstract gradient circle/blob image
+
+Remove dark background and glowing buttons
+
+Buttons:
+
+Simple outlined or solid black buttons
+
+Rounded corners (8–12px)
+
+No glow, no gradients
+
+Hover state: subtle opacity change
+
+Navigation bar:
+
+White background
+
+Black text
+
+Minimal logo
+
+No shadows
+
+Buttons: “Book a Call” as simple black pill button
+
+Sections:
+
+Use grid-based layout
+
+Plenty of spacing between sections
+
+Replace dark cards with light bordered cards
+
+Thin dividers or subtle grid lines
+
+Visual style keywords:
+minimalist, paper texture, editorial, modern art, calm, premium, human, gallery, soft gradients, abstract shapes
+
+Implementation requirements:
+
+Keep all existing content and functionality
+
+Only change styling (CSS + layout)
+
+Update background colors, fonts, spacing, buttons, and hero layout
+
+Add a subtle CSS noise texture overlay for paper feel
+
+Remove neon gradients and dark theme
+
+Do NOT use:
+
+Glassmorphism
+
+Heavy shadows
+
+Neon colors
+
+Dark mode
+
+Futuristic cyberpunk styles
+
+Make the page feel like a modern mental-health or creative studio landing page, inspired by minimalist poster design and abstract art.
