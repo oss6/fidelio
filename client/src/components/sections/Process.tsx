@@ -20,14 +20,24 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="how-it-works" className="py-32 bg-[#F5F4F2]">
-      <div className="container px-6 mx-auto">
-        <div className="mb-24">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-black">The Workflow</h2>
-          <p className="text-[#737373] text-xl max-w-2xl">
+    <section id="how-it-works" className="py-32 bg-[#F5F4F2] relative overflow-hidden">
+      {/* Subtle Radial Background */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-50/30 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container px-6 mx-auto relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-24"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold mb-2 text-black">The Workflow</h2>
+          <div className="section-header-line" />
+          <p className="text-[#737373] text-xl max-w-2xl mt-6">
             A simple, transparent process designed to get your ads live faster.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {steps.map((step, index) => (
@@ -36,10 +46,10 @@ export default function Process() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               className="space-y-6"
             >
-              <div className="text-6xl font-bold text-[#E5E4E2] font-display">{step.number}</div>
+              <div className="text-6xl font-bold text-[#E5E4E2] font-display opacity-60">{step.number}</div>
               <h3 className="text-3xl font-bold text-black leading-tight">{step.title}</h3>
               <p className="text-[#737373] text-lg leading-relaxed">
                 {step.description}

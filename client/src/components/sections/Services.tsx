@@ -6,6 +6,7 @@ import {
   MonitorPlay, 
   Clapperboard 
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -42,23 +43,40 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 bg-white border-y border-[#E5E4E2]">
-      <div className="container px-6 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+    <section id="services" className="py-32 bg-white relative overflow-hidden">
+      {/* Subtle Radial Background */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50/30 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="container px-6 mx-auto relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+        >
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-black">Our Expertise</h2>
-            <p className="text-[#737373] text-xl leading-relaxed">
+            <h2 className="text-4xl md:text-6xl font-bold mb-2 text-black">Our Expertise</h2>
+            <div className="section-header-line" />
+            <p className="text-[#737373] text-xl leading-relaxed mt-6">
               We don't just edit videos. We build creative assets designed to lower your CPA and scale your ad spend.
             </p>
           </div>
           <div className="hidden md:block text-right">
-            <div className="text-6xl font-bold text-[#E5E4E2]">01</div>
+            <div className="text-6xl font-bold text-[#E5E4E2] opacity-50">01</div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-[#E5E4E2]">
           {services.map((service, index) => (
-            <div key={index} className="p-10 border-r border-b border-[#E5E4E2] group hover:bg-[#F5F4F2] transition-colors">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="p-10 border-r border-b border-[#E5E4E2] group hover:bg-[#F5F4F2] transition-colors relative"
+            >
               <div className="w-12 h-12 rounded-full border border-[#E5E4E2] flex items-center justify-center mb-8 group-hover:border-black transition-colors">
                 <service.icon className="w-5 h-5 text-black" />
               </div>
@@ -66,7 +84,7 @@ export default function Services() {
               <p className="text-[#737373] leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

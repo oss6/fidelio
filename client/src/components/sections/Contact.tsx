@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { motion } from "framer-motion";
 import {
   Form,
   FormControl,
@@ -41,11 +42,21 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-[#F5F4F2]">
-      <div className="container px-6 mx-auto max-w-5xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <section id="contact" className="py-32 bg-[#F5F4F2] relative overflow-hidden">
+      {/* Subtle Radial Background */}
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange-50/20 rounded-full blur-[120px] pointer-events-none" />
+      
+      <div className="container px-6 mx-auto max-w-5xl relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-20"
+        >
           <div>
             <h2 className="text-4xl md:text-7xl font-bold mb-8 text-black leading-none">Ready to Scale?</h2>
+            <div className="section-header-line mb-8" />
             <p className="text-[#737373] text-xl leading-relaxed mb-10">
               Book a discovery call to discuss your creative strategy and how we can turn your content into a conversion engine.
             </p>
@@ -61,7 +72,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E5E4E2] rounded-2xl p-8 md:p-12">
+          <div className="bg-white border border-[#E5E4E2] rounded-2xl p-8 md:p-12 shadow-sm">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
@@ -71,7 +82,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-colors" />
+                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -84,7 +95,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-colors" />
+                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -99,7 +110,7 @@ export default function Contact() {
                       <FormControl>
                         <Textarea 
                           placeholder="Tell us about your needs..." 
-                          className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 min-h-[100px] focus-visible:ring-0 focus-visible:border-black transition-colors resize-none" 
+                          className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 min-h-[100px] focus-visible:ring-0 focus-visible:border-black transition-premium resize-none" 
                           {...field} 
                         />
                       </FormControl>
@@ -107,13 +118,13 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-black hover:opacity-80 text-white font-bold transition-all">
+                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-black text-white font-bold transition-premium hover:scale-[1.02] hover:opacity-90 active:scale-95 border-0">
                   Book Your Call
                 </Button>
               </form>
             </Form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

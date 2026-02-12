@@ -1,0 +1,153 @@
+Redesign and enhance my existing landing page for the brand “fidelio.”
+
+Keep the layout structure similar to what already exists (navbar, hero left text, right visual element, CTA buttons), but apply the following changes and improvements:
+
+HERO SECTION CHANGES
+1. New Headline
+
+Replace the current headline with:
+
+“Capture attention. Grow your vision.”
+
+Styling Requirements:
+
+“Capture attention.” should be bold, black, clean, modern.
+
+“Grow your” should remain standard bold black.
+
+The word “vision” must:
+
+Have a multi-color gradient (blend of blue, purple, pink, orange tones).
+
+Be animated on hover.
+
+On hover: smoothly shift gradient position (animated gradient movement).
+
+Slight glow effect when hovered.
+
+Transition should feel smooth and premium (300–500ms ease).
+
+Use gradient text via:
+
+background-clip: text
+
+text-fill-color: transparent
+
+animated background-position
+
+Make the hover animation subtle and modern — not flashy.
+
+2. Animated Orbital Background Element
+
+Currently there is a colored sphere on the right.
+
+Instead:
+
+Create a larger subtle blurred gradient planet shape behind the headline.
+
+Then add a smaller colorful orb that slowly orbits around it.
+
+The orbit animation should be slow, smooth, and continuous.
+
+The animation should feel cinematic and ambient (not distracting).
+
+Use CSS keyframes for rotation and orbit effect.
+
+The style should feel:
+
+Glassy
+
+Soft gradient blending
+
+Slight blur
+
+Subtle glow
+
+The animation must not interfere with readability of the text.
+
+Make sure it remains responsive on mobile.
+
+3. Button Hover Effects
+
+For both:
+
+“Book a Call”
+
+“View Plans”
+
+Add smooth hover transitions:
+
+On Hover:
+
+Background fades into either:
+
+Warm gradient (orange → pink)
+OR
+
+Cool gradient (blue → purple)
+
+Use smooth 300ms transition.
+Slight scale up effect (scale 1.03).
+Add soft shadow glow matching gradient.
+
+Keep the style minimal — no harsh borders.
+
+4. Add More Color & Design Depth Across the Page
+
+Without overdoing it, enhance the site with:
+
+Subtle gradient accents under section headers.
+
+Very soft radial gradient backgrounds behind certain sections.
+
+Light animated background grain texture.
+
+Soft divider lines with gradient fade.
+
+Subtle fade-in animation when sections enter viewport.
+
+Smooth scroll behavior for nav links.
+
+Maintain a clean, premium, minimal look — do NOT make it look cluttered.
+
+DESIGN STYLE
+
+Modern, minimal, slightly futuristic.
+
+Inspired by creative agencies.
+
+High contrast typography.
+
+Generous whitespace.
+
+Smooth micro-interactions.
+
+TECH REQUIREMENTS
+
+Use HTML, CSS, and JavaScript.
+
+Tailwind CSS preferred.
+
+Use CSS keyframes for orbit animation.
+
+Make everything responsive.
+
+Include smooth animation performance (no jank).
+
+PERFORMANCE & POLISH
+
+Animations should be GPU-accelerated where possible.
+
+Use transform and opacity for smooth motion.
+
+Keep load time optimized.
+
+Generate the full working code with:
+
+Clearly separated sections
+
+Clean comments explaining each animation
+
+Organized CSS
+
+Modern best practices
