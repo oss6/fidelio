@@ -42,9 +42,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-[#F5F4F2] relative overflow-hidden">
-      {/* Subtle Radial Background */}
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange-50/20 rounded-full blur-[120px] pointer-events-none" />
+    <section id="contact" className="py-32 bg-soft-gradient-1 relative overflow-hidden">
+       {/* Subtle Noise Texture Overlay */}
+       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
       <div className="container px-6 mx-auto max-w-5xl relative z-10">
         <motion.div 
@@ -118,7 +118,7 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-black text-white font-bold transition-premium hover:scale-[1.02] hover:opacity-90 active:scale-95 border-0">
+                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-black text-white font-bold btn-unified">
                   Book Your Call
                 </Button>
               </form>

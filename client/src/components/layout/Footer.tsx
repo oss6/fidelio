@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-widest text-black">Contact</h4>
-              <a href="mailto:hello@fidelio.com" className="text-sm text-[#737373] hover:text-black transition-colors">hello@fidelio.com</a>
+              <a href="mailto:filmfidelis@gmail.com" className="text-sm text-[#737373] hover:text-black transition-colors">filmfidelis@gmail.com</a>
             </div>
           </div>
         </div>

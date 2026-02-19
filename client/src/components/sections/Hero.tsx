@@ -12,11 +12,17 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Orbital Background Element */}
+      {/* Morphing Blobs Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-blue-100/20 via-purple-100/20 to-orange-100/20 rounded-full blur-3xl opacity-60" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-black/5 rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gradient-to-tr from-blue-400 via-purple-400 to-pink-400 rounded-full blur-[2px] shadow-lg shadow-purple-200/50 animate-orbit" />
+        {/* Main large blob */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/20 via-purple-200/20 to-pink-200/20 blur-3xl opacity-60 animate-blob-morph" />
+        
+        {/* Secondary morphing blobs */}
+        <div className="absolute top-[40%] left-[60%] w-[300px] h-[300px] bg-gradient-to-tr from-orange-200/20 to-pink-200/20 blur-2xl opacity-40 animate-blob-morph" style={{ animationDelay: '-5s' }} />
+        <div className="absolute top-[60%] left-[40%] w-[250px] h-[250px] bg-gradient-to-bl from-cyan-200/20 to-blue-200/20 blur-2xl opacity-40 animate-blob-morph" style={{ animationDelay: '-10s' }} />
+        
+        {/* Liquid Glass accents */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-white/10 border border-white/20 backdrop-blur-[2px] rounded-full animate-blob-morph shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]" />
       </div>
 
       <div className="container px-6 mx-auto relative z-10">
@@ -31,8 +37,15 @@ export default function Hero() {
               Performance Video Creative
             </div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-[110px] font-bold tracking-tight leading-[0.9] text-black">
-              Capture attention. <br />
+            <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black">
+              Capture{" "}
+              <span className="relative inline-block align-baseline">
+                <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible" viewBox="0 0 450 120">
+                  <text x="0" y="90" className="attention-svg-text text-8xl md:text-8xl lg:text-[100px] font-bold tracking-tight font-display">attention</text>
+                </svg>
+                <span className="attention-stroke opacity-0">attention</span>
+                <span className="attention-stroke absolute inset-0">attention</span>
+              </span>. <br />
               Grow your{" "}
               <span className="relative inline-block group cursor-default">
                 <span className="vision-gradient transition-premium hover-glow group-hover:animate-gradient-text">
@@ -49,7 +62,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-5 pt-4">
               <Button 
                 size="lg" 
-                className="h-16 px-10 text-lg rounded-full bg-black text-white transition-premium hover:scale-[1.03] hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:shadow-lg hover:shadow-orange-200 border-0"
+                className="btn-unified h-16 px-10 text-lg rounded-full bg-black text-white"
                 onClick={scrollToContact}
               >
                 Book a Call
@@ -57,7 +70,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="h-16 px-10 text-lg rounded-full border-black text-black transition-premium hover:scale-[1.03] hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg hover:shadow-blue-200 border-1"
+                className="btn-unified btn-unified-cool h-16 px-10 text-lg rounded-full border-black text-black bg-transparent hover:border-transparent transition-all"
                 onClick={scrollToPricing}
               >
                 View Plans

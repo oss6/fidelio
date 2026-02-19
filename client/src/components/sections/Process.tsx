@@ -20,9 +20,9 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="how-it-works" className="py-32 bg-[#F5F4F2] relative overflow-hidden">
-      {/* Subtle Radial Background */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-50/30 rounded-full blur-[100px] pointer-events-none" />
+    <section id="how-it-works" className="py-32 bg-soft-gradient-1 relative overflow-hidden border-y border-[#E5E4E2]">
+      {/* Subtle Noise Texture Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       <div className="container px-6 mx-auto relative z-10">
         <motion.div 

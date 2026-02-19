@@ -1,0 +1,157 @@
+Redesign and enhance my existing “fidelio.” landing page with the following advanced visual and animation updates. Keep the layout structure but implement these design and interaction upgrades precisely.
+
+The overall feel should be:
+Modern. Creative studio. Slightly futuristic. Smooth animations. Premium but playful.
+
+1. HERO VISUAL — MORPHING BLOBS (LIKE SECOND IMAGE)
+
+Replace the current orbital sphere background with:
+
+• A large abstract gradient blob similar to a soft liquid planet.
+• Multiple smaller blobs that continuously:
+
+Merge into one another
+
+Separate apart
+
+Morph shape organically
+• The animation should be smooth and slow.
+• Use CSS keyframes with border-radius morphing OR SVG blob morph animation.
+• Gradients should blend blue, purple, pink, and orange.
+• Add subtle blur and soft glow.
+• Motion should feel fluid and ambient (not chaotic).
+• Ensure performance optimized (transform, opacity only).
+
+It should look like living liquid glass shapes slowly breathing and combining.
+
+2. LOGO HOVER EFFECT (fidelio.)
+
+At the top navigation:
+
+The word “fidelio.” should:
+
+• Appear black by default.
+• When hovered:
+
+A colorful gradient should appear ONLY under the cursor area.
+
+The gradient should follow the mouse position.
+
+Do NOT color the entire logo.
+
+Use mask-image or background-clip with JS mouse tracking.
+
+Smooth transition and subtle glow.
+
+Effect should feel interactive and premium, not flashy.
+
+3. CHANGE CONTACT EMAIL
+
+In the footer:
+Replace the contact email with:
+
+filmfidelis@gmail.com
+
+4. “ATTENTION” TEXT STYLING CHANGE
+
+In the headline:
+
+“Capture attention. Grow your vision.”
+
+Modify the word “attention” as follows:
+
+• Remove fill color (transparent inside).
+• Add stroke outline instead.
+• Stroke must be dashed (not solid).
+• Dashes must animate slowly clockwise.
+• Animation should create the illusion that the word is being lightly traced.
+• Stroke thickness: subtle but visible.
+• Stroke color: black (or very dark grey).
+• Animation speed: slow and elegant (5–8 seconds loop).
+
+Use:
+
+-webkit-text-stroke
+
+SVG stroke-dasharray + stroke-dashoffset animation if needed for best effect.
+
+It must feel like a pencil sketch being gently animated.
+
+5. “VIEW PLANS” BUTTON HOVER UPDATE
+
+For the “View Plans” button:
+
+Currently has black border stroke.
+
+On hover:
+
+• Remove the black border.
+• Add a soft colorful glow behind the button.
+• Background should fade into subtle gradient (blue → purple or orange → pink).
+• Slight scale effect (1.03).
+• 300ms smooth ease transition.
+• Glow should feel diffused and modern.
+
+6. SECTION BACKGROUND COLOR ENHANCEMENTS
+
+For these sections:
+• Workflow section
+• Social proof section
+• “Ready to scale?” section
+
+Replace flat grey backgrounds with:
+
+• Very low-opacity colorful gradient backgrounds.
+• Soft radial or diagonal gradients.
+• Maintain readability.
+• Add subtle blur noise texture.
+• Keep minimal aesthetic.
+
+No heavy saturation — just soft ambient color depth.
+
+7. UNIFY ALL BLACK BUTTONS
+
+All black clickable buttons across the site must:
+
+• Have same animated gradient hover effect as main CTA buttons.
+• On hover:
+
+Fade into gradient
+
+Add soft glow
+
+Slight scale
+• Use consistent animation timing and style across site.
+
+Buttons should feel cohesive and premium.
+
+8. PERFORMANCE + POLISH REQUIREMENTS
+
+• Use CSS keyframes for blob morphing.
+• Use requestAnimationFrame for cursor-follow gradient on logo.
+• GPU-accelerated transforms only.
+• Smooth scroll behavior.
+• Add subtle fade-in animations for sections on scroll.
+• Maintain full responsiveness.
+• Clean organized code with comments.
+
+VISUAL STYLE SUMMARY
+
+• Liquid glass.
+• Soft gradients.
+• Subtle motion.
+• Clean typography.
+• High-end creative agency feel.
+• Nothing cluttered.
+
+Generate full working HTML, CSS, and JavaScript with comments explaining:
+
+Blob morph system
+
+Logo hover gradient tracking
+
+Stroke animation on “attention”
+
+Unified button system
+
+Section gradient layering
