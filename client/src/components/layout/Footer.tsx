@@ -35,17 +35,21 @@ export default function Footer() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-black">Contact</h4>
-              <a href="mailto:filmfidelis@gmail.com" className="text-sm text-[#737373] hover:text-black transition-colors">filmfidelis@gmail.com</a>
+              <h4 className="text-xs font-bold uppercase tracking-widest text-black">Legal</h4>
+              <ul className="space-y-2 text-sm text-[#737373]">
+                <li><Link href="/privacy" className="hover:text-black transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-black transition-colors">Terms of Service</Link></li>
+                <li><a href="mailto:filmfidelis@gmail.com" className="hover:text-black transition-colors">Contact</a></li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-[#E5E4E2] flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-[#E5E4E2]">
           <p className="text-[#737373]">© {new Date().getFullYear()} fidelio. All rights reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <div className="flex gap-8 text-[#737373]">
+            <Link href="/privacy" className="hover:text-black transition-colors uppercase">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-black transition-colors uppercase">Terms of Service</Link>
           </div>
         </div>
       </div>

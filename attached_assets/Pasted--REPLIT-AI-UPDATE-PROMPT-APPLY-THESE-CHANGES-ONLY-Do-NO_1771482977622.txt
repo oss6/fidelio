@@ -1,0 +1,172 @@
+# REPLIT AI UPDATE PROMPT (APPLY THESE CHANGES ONLY)
+
+Do NOT redesign the layout.
+Do NOT change typography scale.
+Do NOT modify spacing system unless explicitly stated.
+Only apply the following corrections and additions.
+
+---
+
+## 1️⃣ Change Dark Sections → Light Low-Opacity Gradient
+
+Sections currently using dark background gradients:
+
+* The Workflow
+* Social Proof
+* Ready to Scale?
+
+Update them to:
+
+* Light gradient backgrounds
+* Very low opacity color blending
+* Soft pastel gradient (light lavender → soft blue → faint pink)
+* 5–12% opacity maximum
+* Subtle, premium, airy feel
+* No heavy contrast
+* No dark blocks
+* Keep text fully readable
+* Maintain section padding and spacing
+
+The site should feel lighter and more elevated.
+
+---
+
+## 2️⃣ Logo Hover Animation Fix (CRITICAL)
+
+The hover effect on **“fidelio.”** must:
+
+* Be clipped inside the text letters ONLY
+* Not appear as a box
+* Not overlay the entire logo container
+* Not create a glow outside the glyphs
+* Not change layout
+
+Implementation requirements:
+
+* Use `background-clip: text`
+* Use `-webkit-background-clip: text`
+* Use `color: transparent`
+* Gradient masked inside text only
+* Remove any background div wrapping the logo
+* Remove glow/shadow spill
+
+The gradient animation must follow the cursor but stay matted inside the word itself.
+
+---
+
+## 3️⃣ Right-Justify Headline (Without Moving It)
+
+Headline:
+“Capture attention.
+Grow your vision.”
+
+Update:
+
+* Text aligned to the right
+* Keep same container width
+* Keep same left margin and vertical spacing
+* Do NOT shift the block position
+* Just change text alignment
+
+No resizing. No layout movement.
+
+---
+
+## 4️⃣ Fix “Book a Call” Button Glitch
+
+There are two black “Book a Call” buttons.
+
+Issue:
+When cursor leaves quickly, the button glitches to white.
+
+Fix:
+
+* Remove conflicting hover/active states
+* Ensure background transitions smoothly
+* Use consistent `transition: all 300ms ease`
+* Prevent state flicker on mouseleave
+* Ensure no temporary white background state
+* Use stable hover class logic
+* Keep button black by default
+* On hover:
+
+  * Subtle gradient or elevated effect
+  * No color flash
+  * No layout shift
+
+Must feel smooth and premium.
+
+---
+
+## 5️⃣ Add Fluid Blob Animation Behind Headline
+
+Add a subtle animated fluid blob behind the hero headline.
+
+Requirements:
+
+* Positioned behind text only
+* Absolutely positioned within hero container
+* Soft blurred gradient blob
+* Very low opacity (10–20%)
+* Slow floating animation
+* Organic shape (border-radius morphing or SVG blob)
+* No harsh colors
+* Blend mode optional (`mix-blend-mode: screen` or similar)
+* Must not affect layout
+* Must not reduce text readability
+
+It should feel atmospheric and premium — similar to modern AI startup sites.
+
+---
+
+## 6️⃣ Add Proper Privacy Policy + Terms of Service Content
+
+Replace placeholder links with actual generic legal copy.
+
+Create two pages:
+
+### Privacy Policy
+
+Include:
+
+* Information collected (name, email, usage data)
+* How data is used (service delivery, marketing, analytics)
+* Cookies usage
+* Third-party tools
+* Data protection statement
+* User rights
+* Contact email placeholder
+* Last updated date
+
+### Terms of Service
+
+Include:
+
+* Acceptance of terms
+* Description of services (video editing / creative services)
+* Payment terms
+* Intellectual property
+* Revisions policy
+* Limitation of liability
+* Termination clause
+* Governing law placeholder
+* Contact email placeholder
+
+Keep language professional and clean.
+No excessive legal jargon.
+Match brand tone.
+
+---
+
+## Constraints
+
+* Do not change fonts.
+* Do not alter hero spacing.
+* Do not modify navigation layout.
+* Do not redesign buttons.
+* Do not change copy unless specified.
+* Only implement the six items above.
+
+---
+
+Apply clean, organized code updates only.

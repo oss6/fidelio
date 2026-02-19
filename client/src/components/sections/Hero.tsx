@@ -23,6 +23,9 @@ export default function Hero() {
         
         {/* Liquid Glass accents */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-white/10 border border-white/20 backdrop-blur-[2px] rounded-full animate-blob-morph shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]" />
+        
+        {/* Fluid Atmospheric Blob */}
+        <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-gradient-to-br from-purple-300/10 via-blue-300/10 to-pink-300/10 rounded-full blur-[80px] animate-blob-morph mix-blend-screen pointer-events-none z-[-1]" />
       </div>
 
       <div className="container px-6 mx-auto relative z-10">
@@ -37,7 +40,7 @@ export default function Hero() {
               Performance Video Creative
             </div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black">
+            <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black text-right">
               Capture{" "}
               <span className="liquid-glass-text animate-gradient-text" data-text="attention">
                 attention
@@ -51,11 +54,11 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light ml-auto text-right">
               Short-form video editing, ad creatives & storytelling for brands that scale. We turn your content into growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-5 pt-4">
+            <div className="flex flex-col sm:flex-row items-center gap-5 pt-4 justify-end">
               <Button 
                 size="lg" 
                 className="btn-unified h-16 px-10 text-lg rounded-full bg-black text-white"

@@ -20,7 +20,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="how-it-works" className="py-32 bg-dark-cinematic-1 relative overflow-hidden border-y border-white/5">
+    <section id="how-it-works" className="py-32 bg-light-elevated relative overflow-hidden border-y border-[#E5E4E2]">
       {/* Subtle Noise Texture Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
@@ -32,9 +32,9 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="mb-24"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-2 text-white">The Workflow</h2>
-          <div className="section-header-line bg-white/20" />
-          <p className="text-white/60 text-xl max-w-2xl mt-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-2 text-black">The Workflow</h2>
+          <div className="section-header-line" />
+          <p className="text-[#737373] text-xl max-w-2xl mt-6">
             A simple, transparent process designed to get your ads live faster.
           </p>
         </motion.div>
@@ -49,9 +49,9 @@ export default function Process() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="space-y-6"
             >
-              <div className="text-6xl font-bold text-white/10 font-display">{step.number}</div>
-              <h3 className="text-3xl font-bold text-white leading-tight">{step.title}</h3>
-              <p className="text-white/60 text-lg leading-relaxed">
+              <div className="text-6xl font-bold text-[#E5E4E2] font-display opacity-60">{step.number}</div>
+              <h3 className="text-3xl font-bold text-black leading-tight">{step.title}</h3>
+              <p className="text-[#737373] text-lg leading-relaxed">
                 {step.description}
               </p>
             </motion.div>
