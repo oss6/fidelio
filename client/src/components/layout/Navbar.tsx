@@ -60,31 +60,21 @@ export default function Navbar() {
           <a 
             ref={logoRef}
             onMouseMove={handleMouseMove}
-            className="group relative text-xl font-bold tracking-tight font-display text-black overflow-hidden py-1 px-1"
+            className="group relative text-xl font-bold tracking-tight font-display text-black py-1 px-1"
           >
-            <span className="relative z-10">fidelio.</span>
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-transparent">fidelio.</span>
             <div 
               className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{
-                background: `radial-gradient(circle 30px at ${mousePos.x}px ${mousePos.y}px, #3b82f6, #a855f7, #ec4899, transparent)`,
+                background: `radial-gradient(circle 40px at ${mousePos.x}px ${mousePos.y}px, #3b82f6, #a855f7, #ec4899, #f97316)`,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+                backgroundClip: 'text',
+                zIndex: 20
               }}
             >
               fidelio.
             </div>
-            {/* Subtle glow layer */}
-            <div 
-              className="absolute pointer-events-none opacity-0 group-hover:opacity-40 blur-md transition-opacity duration-300"
-              style={{
-                left: mousePos.x - 15,
-                top: mousePos.y - 15,
-                width: 30,
-                height: 30,
-                background: `radial-gradient(circle, #a855f7, transparent)`,
-              }}
-            />
           </a>
         </Link>
 

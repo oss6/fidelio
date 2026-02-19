@@ -86,26 +86,29 @@ h1, h2, h3, h4, h5, h6 {
   animation: blob-morph 15s ease-in-out infinite alternate;
 }
 
-/* Dash Animation for "attention" */
-@keyframes dash-scroll {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.attention-stroke {
+/* Liquid Glass Text Effect */
+.liquid-glass-text {
+  background: linear-gradient(135deg, #3b82f6, #a855f7, #ec4899, #f97316);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px black;
+  background-clip: text;
   position: relative;
+  display: inline-block;
 }
 
-.attention-svg-text {
-  fill: transparent;
-  stroke: black;
-  stroke-width: 1.5;
-  stroke-dasharray: 10 5;
-  stroke-dashoffset: 100;
-  animation: dash-scroll 8s linear infinite;
+.liquid-glass-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  pointer-events: none;
 }
 
 /* Gradient Text Animation */
@@ -138,21 +141,26 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.btn-unified-cool {
+  @apply border border-black bg-transparent text-black transition-all duration-300;
+}
+
 .btn-unified-cool:hover {
   background: linear-gradient(to right, #3b82f6, #a855f7);
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
   color: white;
+  border-color: transparent;
 }
 
-/* Section Backgrounds */
-.bg-soft-gradient-1 {
-  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.03), transparent 70%),
-              radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.03), transparent 70%);
+/* Section Backgrounds - Dark Cinematic */
+.bg-dark-cinematic-1 {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #171717 100%);
+  color: white;
 }
 
-.bg-soft-gradient-2 {
-  background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.03), transparent 70%),
-              radial-gradient(circle at bottom left, rgba(249, 115, 22, 0.03), transparent 70%);
+.bg-dark-cinematic-2 {
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #171717 100%);
+  color: white;
 }
 
 .transition-premium {

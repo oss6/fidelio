@@ -1,0 +1,110 @@
+Do NOT redesign the page.
+Do NOT modify layout structure.
+Only fix the following issues precisely:
+
+---
+
+## 1️⃣ Logo Hover Effect Fix
+
+Current issue:
+The gradient hover effect appears around the logo instead of inside the letters.
+
+Fix:
+
+* The hover gradient must appear **inside the “fidelio.” letters only**.
+* The gradient should be clipped to the text.
+* Use:
+
+  * `background-clip: text`
+  * `-webkit-background-clip: text`
+  * `color: transparent`
+* The mouse-tracking gradient should be masked inside the glyphs.
+* There should be NO glow, aura, or color spill outside the text.
+* Remove any outer box-shadow or glow effect.
+* Keep the cursor-follow interaction — just constrain it inside the letters.
+
+The logo should remain black by default and only show gradient inside letters on hover.
+
+---
+
+## 2️⃣ Undo “attention” and Make It Liquid Glass (Same Font)
+
+Undo all previous stroke, dashed, SVG, or handwritten changes.
+
+Replace “attention” with:
+
+* Same exact font
+* Same weight
+* Same size
+* Same baseline alignment as “Capture”
+* Inline (not script, not SVG)
+
+Then apply a **liquid glass effect** using:
+
+* Gradient background (blue → purple → pink → orange)
+* `background-clip: text`
+* `color: transparent`
+* Subtle inner highlight
+* Slight glass sheen (very soft white gradient overlay)
+* Optional subtle blur + backdrop-style effect if possible
+* No font change
+* No layout shift
+
+It must visually match the typographic system perfectly.
+
+---
+
+## 3️⃣ Section Background Fix (Darker Gradient)
+
+For sections:
+
+* “The Workflow”
+* “Social Proof”
+* “Ready to scale?”
+
+Currently grey.
+
+Change to:
+
+* Dark gradient backgrounds
+* Deep tones (dark purple, dark blue, deep charcoal with subtle color blending)
+* Very low contrast gradient (premium feel)
+* Keep text fully readable
+* No harsh neon
+* No light pastel
+
+Make them feel cinematic and high-end.
+
+---
+
+## 4️⃣ “View Plans” Button Border Fix
+
+Currently the black outline disappears entirely.
+
+Fix:
+
+* When NOT hovered:
+
+  * Must have black outline
+  * Transparent or light background
+* On hover:
+
+  * Keep gradient background
+  * Keep glow
+  * Border may fade slightly but must not fully disappear
+* Smooth 300ms transition
+* Do not alter button size or padding
+
+---
+
+## Constraints
+
+* Do not change spacing.
+* Do not change typography system.
+* Do not alter animations that are already correct.
+* Do not redesign other sections.
+* Only fix the four issues above.
+
+---
+
+Apply clean, organized code corrections only.

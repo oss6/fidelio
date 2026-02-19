@@ -39,12 +39,8 @@ export default function Hero() {
 
             <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black">
               Capture{" "}
-              <span className="relative inline-block align-baseline">
-                <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible" viewBox="0 0 450 120">
-                  <text x="0" y="90" className="attention-svg-text text-8xl md:text-8xl lg:text-[100px] font-bold tracking-tight font-display">attention</text>
-                </svg>
-                <span className="attention-stroke opacity-0">attention</span>
-                <span className="attention-stroke absolute inset-0">attention</span>
+              <span className="liquid-glass-text animate-gradient-text" data-text="attention">
+                attention
               </span>. <br />
               Grow your{" "}
               <span className="relative inline-block group cursor-default">
@@ -56,7 +52,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light">
-              Short-form video editing, ad creatives & storytelling for brands that scale. We turn your raw footage into growth.
+              Short-form video editing, ad creatives & storytelling for brands that scale. We turn your content into growth.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-5 pt-4">
@@ -70,7 +66,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="btn-unified btn-unified-cool h-16 px-10 text-lg rounded-full border-black text-black bg-transparent hover:border-transparent transition-all"
+                className="btn-unified btn-unified-cool h-16 px-10 text-lg rounded-full"
                 onClick={scrollToPricing}
               >
                 View Plans

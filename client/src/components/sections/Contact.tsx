@@ -42,7 +42,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-soft-gradient-1 relative overflow-hidden">
+    <section id="contact" className="py-32 bg-dark-cinematic-1 relative overflow-hidden">
        {/* Subtle Noise Texture Overlay */}
        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
@@ -55,24 +55,24 @@ export default function Contact() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-20"
         >
           <div>
-            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-black leading-none">Ready to Scale?</h2>
-            <div className="section-header-line mb-8" />
-            <p className="text-[#737373] text-xl leading-relaxed mb-10">
+            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-none">Ready to Scale?</h2>
+            <div className="section-header-line mb-8 bg-white/20" />
+            <p className="text-white/60 text-xl leading-relaxed mb-10">
               Book a discovery call to discuss your creative strategy and how we can turn your content into a conversion engine.
             </p>
             <div className="space-y-4">
-              <div className="flex items-center gap-4 text-black font-bold">
-                <div className="w-2 h-2 rounded-full bg-black" />
+              <div className="flex items-center gap-4 text-white font-bold">
+                <div className="w-2 h-2 rounded-full bg-white" />
                 24h Response Time
               </div>
-              <div className="flex items-center gap-4 text-black font-bold">
-                <div className="w-2 h-2 rounded-full bg-black" />
+              <div className="flex items-center gap-4 text-white font-bold">
+                <div className="w-2 h-2 rounded-full bg-white" />
                 Global Clients
               </div>
             </div>
           </div>
 
-          <div className="bg-white border border-[#E5E4E2] rounded-2xl p-8 md:p-12 shadow-sm">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 shadow-sm">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
@@ -80,9 +80,9 @@ export default function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Name</FormLabel>
+                      <FormLabel className="text-white font-bold uppercase text-xs tracking-widest">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
+                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 text-white placeholder:text-white/30 focus-visible:ring-0 focus-visible:border-white transition-premium" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -93,9 +93,9 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Email</FormLabel>
+                      <FormLabel className="text-white font-bold uppercase text-xs tracking-widest">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
+                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 text-white placeholder:text-white/30 focus-visible:ring-0 focus-visible:border-white transition-premium" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -106,11 +106,11 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Message</FormLabel>
+                      <FormLabel className="text-white font-bold uppercase text-xs tracking-widest">Message</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="Tell us about your needs..." 
-                          className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 min-h-[100px] focus-visible:ring-0 focus-visible:border-black transition-premium resize-none" 
+                          className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 min-h-[100px] text-white placeholder:text-white/30 focus-visible:ring-0 focus-visible:border-white transition-premium resize-none" 
                           {...field} 
                         />
                       </FormControl>
@@ -118,7 +118,7 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-black text-white font-bold btn-unified">
+                <Button type="submit" size="lg" className="w-full h-16 rounded-full text-lg bg-white text-black font-bold btn-unified hover:bg-white/90">
                   Book Your Call
                 </Button>
               </form>
