@@ -6,8 +6,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const logoRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,15 +14,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!logoRef.current) return;
-    const rect = logoRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    });
-  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -58,23 +47,9 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
           <a 
-            ref={logoRef}
-            onMouseMove={handleMouseMove}
-            className="group relative text-xl font-bold tracking-tight font-display text-black py-1 px-1"
+            className="relative text-xl font-bold tracking-tight font-display text-black transition-all duration-300 logo-glow"
           >
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-transparent">fidelio.</span>
-            <div 
-              className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                background: `radial-gradient(circle 40px at ${mousePos.x}px ${mousePos.y}px, #3b82f6, #a855f7, #ec4899, #f97316)`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                zIndex: 20
-              }}
-            >
-              fidelio.
-            </div>
+            fidelio.
           </a>
         </Link>
 

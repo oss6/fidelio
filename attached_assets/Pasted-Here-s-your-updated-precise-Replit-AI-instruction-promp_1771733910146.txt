@@ -1,0 +1,159 @@
+Here’s your updated **precise Replit AI instruction prompt** with only the requested changes included:
+
+---
+
+# REPLIT AI UPDATE PROMPT (APPLY ONLY THESE CHANGES)
+
+Do NOT redesign layout.
+Do NOT change typography scale.
+Do NOT modify spacing system unless explicitly stated.
+Only apply the following updates.
+
+---
+
+## 1️⃣ Headline Alignment + Hover Glow
+
+### Alignment
+
+* Left-justify the entire hero headline:
+
+  * “Capture attention.”
+  * “Grow your vision.”
+* Keep the hero container in the exact same position.
+* Do NOT move the block.
+* Do NOT change font size, line height, or spacing.
+* Only change `text-align` to left.
+
+---
+
+### Hover Glow Effect (attention + vision)
+
+For the words:
+
+* **attention**
+* **vision**
+
+Add a hover effect:
+
+* Soft gradient glow
+* Glow should match their existing gradient colors
+* Use subtle outer glow (blurred radial gradient or text-shadow stack)
+* Smooth 300ms ease transition
+* No layout shift
+* No scaling
+* No font weight change
+
+Glow should feel premium and diffused — not neon.
+
+---
+
+## 2️⃣ Remove Logo Gradient Hover → Replace With Glow
+
+Top-left logo: **“fidelio.”**
+
+Remove completely:
+
+* Cursor-follow gradient
+* Background-clip animation
+* Masked gradient
+* Any box overlay
+
+Replace with:
+
+* Simple glow on hover
+* Same glow style used for “attention” and “vision”
+* Keep logo black by default
+* On hover → soft colored glow (subtle purple/blue tone)
+* No movement
+* No layout shift
+* 300ms smooth transition
+
+Must feel consistent with headline hover.
+
+---
+
+## 3️⃣ Background Blob Update (Match abstract-blob.png)
+
+Update the animated blob behind the headline:
+
+* Match color palette from `abstract-blob.png`
+* Richer blended gradient tones
+* Multi-hue blend (purple, pink, orange, blue)
+* More fluid texture
+* Slight grain or noise texture overlay (very subtle)
+* Keep opacity between 12–20%
+* Maintain slow floating animation
+* Organic morphing shape
+* Do NOT overpower text readability
+
+The blob should feel dimensional and atmospheric.
+
+---
+
+## 4️⃣ “The Workflow” Section Updates
+
+### A) Number Color Contrast
+
+Change the step numbers to:
+
+* Higher contrast color
+* Inspired by abstract-blob palette
+* Slightly bolder presence
+* Must remain readable on light background
+* No neon
+* No oversaturation
+
+---
+
+### B) Add Divider Line
+
+Add a thin horizontal divider line between:
+
+“A simple, transparent process designed to get your ads live faster.”
+
+AND
+
+The numbered steps below it.
+
+Divider requirements:
+
+* 1px height
+* Subtle gradient or soft neutral tone
+* 40–60% container width
+* Center aligned
+* Spaced evenly above and below
+* No heavy borders
+
+Clean and minimal.
+
+---
+
+## 5️⃣ “Ready to Scale?” Section Gradient Background
+
+Update this section to include:
+
+* Gradient background inspired by `abstract-blob.png`
+* Soft blended hues (purple → pink → orange → blue)
+* Low opacity
+* Subtle radial blending
+* Premium look
+* Keep text readable
+* Do NOT darken the entire section
+* No harsh transitions
+
+It should feel like a gentle atmospheric color wash.
+
+---
+
+## Constraints
+
+* Do NOT modify hero spacing.
+* Do NOT resize headline.
+* Do NOT change button styling.
+* Do NOT adjust nav layout.
+* Do NOT alter other sections.
+* Only implement the five updates above.
+
+---
+
+Apply clean, structured code changes only.

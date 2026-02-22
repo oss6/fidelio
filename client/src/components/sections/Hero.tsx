@@ -12,20 +12,19 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Morphing Blobs Background */}
+      {/* Abstract Blob Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
-        {/* Main large blob */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/20 via-purple-200/20 to-pink-200/20 blur-3xl opacity-60 animate-blob-morph" />
-        
-        {/* Secondary morphing blobs */}
-        <div className="absolute top-[40%] left-[60%] w-[300px] h-[300px] bg-gradient-to-tr from-orange-200/20 to-pink-200/20 blur-2xl opacity-40 animate-blob-morph" style={{ animationDelay: '-5s' }} />
-        <div className="absolute top-[60%] left-[40%] w-[250px] h-[250px] bg-gradient-to-bl from-cyan-200/20 to-blue-200/20 blur-2xl opacity-40 animate-blob-morph" style={{ animationDelay: '-10s' }} />
-        
-        {/* Liquid Glass accents */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-white/10 border border-white/20 backdrop-blur-[2px] rounded-full animate-blob-morph shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]" />
-        
-        {/* Fluid Atmospheric Blob */}
-        <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-gradient-to-br from-purple-300/10 via-blue-300/10 to-pink-300/10 rounded-full blur-[80px] animate-blob-morph mix-blend-screen pointer-events-none z-[-1]" />
+        {/* Dimensional Atmospheric Blob */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[100px] animate-blob-morph opacity-20 z-[-1]"
+          style={{
+            background: `radial-gradient(circle at center, #a855f7, #ec4899, #f97316, #3b82f6)`,
+            mixBlendMode: 'screen',
+            boxShadow: 'inset 0 0 100px rgba(255,255,255,0.2)'
+          }}
+        />
+        {/* Grain Texture Overlay */}
+        <div className="absolute inset-0 opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none" />
       </div>
 
       <div className="container px-6 mx-auto relative z-10">
@@ -40,9 +39,9 @@ export default function Hero() {
               Performance Video Creative
             </div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black text-right">
+            <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black text-left">
               Capture{" "}
-              <span className="liquid-glass-text animate-gradient-text" data-text="attention">
+              <span className="liquid-glass-text animate-gradient-text cursor-default" data-text="attention">
                 attention
               </span>. <br />
               Grow your{" "}
@@ -54,11 +53,11 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light ml-auto text-right">
+            <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light text-left">
               Short-form video editing, ad creatives & storytelling for brands that scale. We turn your content into growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-5 pt-4 justify-end">
+            <div className="flex flex-col sm:flex-row items-center gap-5 pt-4 justify-start">
               <Button 
                 size="lg" 
                 className="btn-unified h-16 px-10 text-lg rounded-full bg-black text-white"

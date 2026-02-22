@@ -42,7 +42,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-light-elevated relative overflow-hidden">
+    <section id="contact" className="py-32 bg-abstract-wash relative overflow-hidden">
        {/* Subtle Noise Texture Overlay */}
        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
@@ -72,7 +72,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E5E4E2] rounded-2xl p-8 md:p-12 shadow-sm">
+          <div className="bg-white/80 backdrop-blur-md border border-[#E5E4E2] rounded-2xl p-8 md:p-12 shadow-sm">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
