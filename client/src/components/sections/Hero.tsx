@@ -1,5 +1,76 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
+
+const FloatingBlob = ({ color, initialX, initialY, duration, delay }: { color: string, initialX: string, initialY: string, duration: number, delay: number }) => (
+  <motion.div
+    className="absolute rounded-full blur-[100px] opacity-40 mix-blend-screen pointer-events-none"
+    style={{
+      background: `radial-gradient(circle at center, ${color}, transparent)`,
+      width: '400px',
+      height: '400px',
+      left: initialX,
+      top: initialY,
+    }}
+    animate={{
+      x: [0, 50, -30, 0],
+      y: [0, -40, 60, 0],
+    }}
+    transition={{
+      duration: duration,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay: delay,
+    }}
+  />
+);
+
+const InteractiveWord = ({ children, className, dataText }: { children: React.ReactNode, className?: string, dataText?: string }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springX = useSpring(mouseX, { stiffness: 100, damping: 20 });
+  const springY = useSpring(mouseY, { stiffness: 100, damping: 20 });
+  const isHovered = useMotionValue(0);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    mouseX.set(e.clientX - rect.left);
+    mouseY.set(e.clientY - rect.top);
+  };
+
+  return (
+    <span 
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => isHovered.set(1)}
+      onMouseLeave={() => isHovered.set(0)}
+      className={`relative inline-block ${className}`}
+      data-text={dataText}
+      style={{
+        transition: 'text-shadow 0.3s ease'
+      } as any}
+    >
+      <motion.span
+        className="absolute inset-0 pointer-events-none z-10"
+        style={{
+          background: `radial-gradient(circle 60px at var(--mouse-x) var(--mouse-y), rgba(34, 197, 94, 0.5), rgba(59, 130, 246, 0.5), rgba(234, 179, 8, 0.4), transparent)`,
+          opacity: isHovered,
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          transition: 'opacity 0.3s ease',
+          '--mouse-x': springX.set + 'px',
+          '--mouse-y': springY.set + 'px'
+        } as any}
+      >
+        {children}
+      </motion.span>
+      {children}
+    </span>
+  );
+};
 
 export default function Hero() {
   const scrollToPricing = () => {
@@ -12,17 +83,14 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Abstract Blob Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
-        {/* Dimensional Atmospheric Blob */}
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[100px] animate-blob-morph opacity-20 z-[-1]"
-          style={{
-            background: `radial-gradient(circle at center, #a855f7, #ec4899, #f97316, #3b82f6)`,
-            mixBlendMode: 'screen',
-            boxShadow: 'inset 0 0 100px rgba(255,255,255,0.2)'
-          }}
-        />
+      {/* Floating Blobs Background */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <FloatingBlob color="#a855f7" initialX="10%" initialY="20%" duration={20} delay={0} />
+        <FloatingBlob color="#ec4899" initialX="60%" initialY="15%" duration={25} delay={-5} />
+        <FloatingBlob color="#f97316" initialX="20%" initialY="60%" duration={22} delay={-10} />
+        <FloatingBlob color="#3b82f6" initialX="70%" initialY="70%" duration={28} delay={-15} />
+        <FloatingBlob color="#14b8a6" initialX="40%" initialY="40%" duration={30} delay={-2} />
+        
         {/* Grain Texture Overlay */}
         <div className="absolute inset-0 opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none" />
       </div>
@@ -41,16 +109,14 @@ export default function Hero() {
 
             <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black text-left">
               Capture{" "}
-              <span className="liquid-glass-text animate-gradient-text cursor-default" data-text="attention">
+              <InteractiveWord className="liquid-glass-text animate-gradient-text cursor-default" dataText="attention">
                 attention
-              </span>. <br />
+              </InteractiveWord>. <br />
               Grow your{" "}
-              <span className="relative inline-block group cursor-default">
-                <span className="vision-gradient transition-premium hover-glow group-hover:animate-gradient-text">
-                  vision
-                </span>
-                .
-              </span>
+              <InteractiveWord className="vision-gradient transition-premium hover-glow group-hover:animate-gradient-text cursor-default">
+                vision
+              </InteractiveWord>
+              .
             </h1>
 
             <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light text-left">

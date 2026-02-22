@@ -1,0 +1,135 @@
+# REPLIT AI — APPLY EXACT CHANGES ONLY
+
+Do NOT redesign.
+Do NOT adjust typography scale (except logo).
+Do NOT change layout structure.
+Only implement the changes below exactly as written.
+
+---
+
+## 1️⃣ REMOVE Single Blob → ADD Multiple Moving Blobs (Like Reference Image)
+
+Remove:
+
+* The current single animated background blob
+* Any morphing SVG blob
+* Any central radial gradient glow
+
+Replace with:
+
+Create **multiple floating gradient blobs** in the hero background, similar to the second reference image.
+
+Requirements:
+
+* 3–5 blobs
+* Large soft circular shapes
+* Radial gradients
+* Multicolor blending (purple, pink, orange, blue, teal)
+* Heavy blur (blur: 80px–120px)
+* Semi-transparent
+* Positioned absolutely
+* Spread across hero area (not centered)
+* Overlapping slightly
+* Very slow floating animation (different speeds)
+* Subtle drifting (translateX / translateY)
+* No scaling pulsing
+* No sharp edges
+* No harsh saturation
+
+The effect should feel atmospheric and premium — not like a glowing spotlight.
+
+Important:
+Blobs must sit behind content.
+Use z-index layering correctly.
+Do NOT reduce text readability.
+
+---
+
+## 2️⃣ Logo Update (Top Left)
+
+### Size
+
+* Increase “fidelio.” logo size by 25%
+* Do not change font
+* Do not change spacing around nav
+
+### Hover Animation Change
+
+Current behavior must be removed.
+
+New hover behavior:
+
+1. Default:
+
+   * Solid black
+
+2. On hover:
+
+   * Text transitions to multicolor gradient (same palette as blobs)
+   * Gradient clipped inside text (background-clip: text)
+   * Color: transparent
+   * After gradient appears → subtle glow around text
+   * Glow matches gradient tones
+   * Smooth 300ms transition
+   * No box
+   * No background container
+   * No cursor tracking
+
+It should feel like:
+Black → morphs into vibrant gradient → softly glows.
+
+No animation outside the letters.
+
+---
+
+## 3️⃣ Reduce Empty Space in “The Workflow” Section
+
+The section currently has too much vertical whitespace.
+
+Adjust:
+
+* Reduce top padding slightly
+* Reduce spacing between heading and description
+* Reduce spacing between description and steps
+* Keep layout clean
+* Do NOT compress it aggressively
+* Just tighten it so it feels more connected
+
+Do not change typography.
+Do not resize numbers.
+
+Only reduce vertical spacing.
+
+---
+
+## 4️⃣ Make “Ready to Scale” Background More Vibrant
+
+Current gradient is too soft.
+
+Update to:
+
+* More vibrant multi-color gradient
+* Pull stronger hues from reference image
+* Purple → hot pink → orange → deep blue blend
+* Slight radial layering
+* Keep smooth blending
+* No muddy gray tones
+* Maintain readability of text
+* No neon glow effect
+
+The section should feel energetic and high-end, not pastel.
+
+---
+
+## Constraints
+
+* Do not modify headline alignment.
+* Do not alter button design.
+* Do not change navigation layout.
+* Do not add new sections.
+* Do not adjust hero spacing.
+* Only apply the four updates above.
+
+---
+
+Apply clean, structured CSS and animation updates only.

@@ -42,9 +42,17 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-abstract-wash relative overflow-hidden">
+    <section id="contact" className="py-32 relative overflow-hidden" style={{
+      background: 'linear-gradient(135deg, #a855f7, #ec4899, #f97316, #3b82f6)',
+      backgroundSize: '200% 200%',
+    }}>
+       {/* Vibrant Overlay */}
+       <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
+         background: 'radial-gradient(circle at 30% 30%, white, transparent 70%)',
+       }} />
+       
        {/* Subtle Noise Texture Overlay */}
-       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+       <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       
       <div className="container px-6 mx-auto max-w-5xl relative z-10">
         <motion.div 
@@ -55,24 +63,24 @@ export default function Contact() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-20"
         >
           <div>
-            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-black leading-none">Ready to Scale?</h2>
-            <div className="section-header-line mb-8" />
-            <p className="text-[#737373] text-xl leading-relaxed mb-10">
+            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-none">Ready to Scale?</h2>
+            <div className="section-header-line mb-8 bg-white/30" />
+            <p className="text-white/90 text-xl leading-relaxed mb-10">
               Book a discovery call to discuss your creative strategy and how we can turn your content into a conversion engine.
             </p>
             <div className="space-y-4">
-              <div className="flex items-center gap-4 text-black font-bold">
-                <div className="w-2 h-2 rounded-full bg-black" />
+              <div className="flex items-center gap-4 text-white font-bold">
+                <div className="w-2 h-2 rounded-full bg-white" />
                 24h Response Time
               </div>
-              <div className="flex items-center gap-4 text-black font-bold">
-                <div className="w-2 h-2 rounded-full bg-black" />
+              <div className="flex items-center gap-4 text-white font-bold">
+                <div className="w-2 h-2 rounded-full bg-white" />
                 Global Clients
               </div>
             </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-md border border-[#E5E4E2] rounded-2xl p-8 md:p-12 shadow-sm">
+          <div className="bg-white/95 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField

@@ -1,0 +1,178 @@
+# REPLIT AI — APPLY EXACT CHANGES ONLY
+
+Do NOT redesign.
+Do NOT modify layout structure.
+Do NOT change typography scale (except logo size).
+Only implement the changes listed below exactly as written.
+
+---
+
+## 1️⃣ Replace Single Blob → Add Multiple Floating Blobs (Like Reference)
+
+Remove completely:
+
+* The current single animated blob
+* Any morphing SVG blob
+* Any central radial glow effect
+
+Replace with:
+
+Create **3–5 large floating gradient blobs** in the hero background.
+
+Requirements:
+
+* Soft circular radial gradients
+* Heavy blur (80px–120px)
+* Multicolor blend (purple, pink, orange, blue, teal)
+* Semi-transparent
+* Positioned absolutely
+* Spread across hero area (not centered)
+* Slight overlapping
+* Very slow drifting animation
+* Each blob moves at slightly different speed
+* No scaling pulsing
+* No sharp edges
+* No harsh neon saturation
+
+Blobs must:
+
+* Sit behind all hero content
+* Not reduce text readability
+* Use proper z-index layering
+
+The look should match the second reference image: modern, diffused, dimensional.
+
+---
+
+## 2️⃣ Logo Update (Top Left)
+
+### Size
+
+* Increase “fidelio.” logo size by 25%
+* Do not change font
+* Do not change nav spacing
+
+### Hover Behavior
+
+Remove entirely:
+
+* Cursor tracking gradient
+* Any background box
+* Any container glow
+
+New hover effect:
+
+Default:
+
+* Solid black
+
+On hover:
+
+* Text transitions into multicolor gradient (same palette as blobs)
+* Gradient clipped inside text (background-clip: text)
+* color: transparent
+* After gradient appears → subtle outer glow
+* Glow matches gradient tones
+* Smooth 300ms ease transition
+* No movement
+* No scaling
+* No layout shift
+
+Behavior:
+Black → gradient → soft glow.
+
+---
+
+## 3️⃣ Update “attention” and “vision” Hover Effect (IMPORTANT)
+
+Current glow effect must be replaced.
+
+New behavior:
+
+Default:
+
+* Original gradient styling remains
+
+On hover:
+
+1. The gradient shifts into **cool-spectrum hues only**:
+
+   * Green
+   * Blue
+   * Yellow
+   * Aqua tones
+
+2. The glow must:
+
+   * Appear ONLY in a small-to-medium circular area
+   * Centered around the cursor position
+   * Not cover entire word
+   * Not glow edge-to-edge
+   * Fade outward softly
+   * Use radial gradient mask tied to cursor position
+
+3. Implementation:
+
+* Track cursor position inside the word
+* Apply radial gradient mask based on hover coordinates
+* Blend into cool-spectrum gradient
+* 300ms smooth transition
+* No scaling
+* No layout shift
+* No aggressive neon glow
+
+The effect should feel like:
+The cursor “activates” a localized cool glow that follows the mouse slightly.
+
+Premium. Subtle. Controlled.
+
+---
+
+## 4️⃣ Reduce Empty Space in “The Workflow” Section
+
+Adjust vertical spacing only:
+
+* Slightly reduce top padding
+* Reduce space between:
+
+  * Heading and description
+  * Description and steps
+* Keep layout breathable
+* Do NOT compress aggressively
+* Do NOT resize typography
+
+Just tighten spacing.
+
+---
+
+## 5️⃣ Make “Ready to Scale” Background More Vibrant
+
+Current gradient is too soft.
+
+Update to:
+
+* More saturated multi-color gradient
+* Pull stronger hues from reference
+* Purple → hot pink → orange → deep blue blend
+* Subtle radial blending
+* Smooth transitions
+* No gray muddy tones
+* Maintain text readability
+* No heavy glow effects
+
+Should feel energetic and high-end.
+
+---
+
+## Global Constraints
+
+* Do not modify hero layout.
+* Do not change button styling.
+* Do not change nav layout.
+* Do not alter headline size.
+* Do not redesign sections.
+* Only apply the five updates above.
+
+---
+
+Apply clean, structured CSS and animation logic only.

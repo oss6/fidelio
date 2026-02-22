@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
           <a 
-            className="relative text-xl font-bold tracking-tight font-display text-black transition-all duration-300 logo-glow"
+            className="relative text-2xl md:text-3xl font-bold tracking-tight font-display text-black transition-all duration-300 logo-hover-gradient"
           >
             fidelio.
           </a>

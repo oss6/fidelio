@@ -23,7 +23,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="how-it-works" className="py-32 bg-light-elevated relative overflow-hidden border-y border-[#E5E4E2]">
+    <section id="how-it-works" className="pt-24 pb-32 bg-light-elevated relative overflow-hidden border-y border-[#E5E4E2]">
       {/* Subtle Noise Texture Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
@@ -33,17 +33,17 @@ export default function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-8"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-2 text-black">The Workflow</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-black">The Workflow</h2>
           <div className="section-header-line" />
-          <p className="text-[#737373] text-xl max-w-2xl mt-6">
+          <p className="text-[#737373] text-xl max-w-2xl mt-4">
             A simple, transparent process designed to get your ads live faster.
           </p>
         </motion.div>
 
         {/* Divider Line */}
-        <div className="w-full flex justify-center py-16">
+        <div className="w-full flex justify-center py-10">
           <div className="h-[1px] w-1/2 bg-gradient-to-r from-transparent via-[#E5E4E2] to-transparent opacity-60" />
         </div>
 
