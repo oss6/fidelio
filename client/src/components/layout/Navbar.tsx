@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const logoRef = useRef<HTMLAnchorElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,15 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!logoRef.current) return;
+    const rect = logoRef.current.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -47,9 +59,25 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
           <a 
-            className="relative text-2xl md:text-3xl font-bold tracking-tight font-display text-black transition-all duration-300 logo-hover-gradient"
+            ref={logoRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="relative text-2xl md:text-3xl font-bold tracking-tight font-display text-black overflow-hidden py-1"
           >
-            fidelio.
+            <span 
+              className="relative z-10 transition-colors duration-300"
+              style={{
+                background: isHovered 
+                  ? `radial-gradient(circle 20px at ${mousePos.x}px ${mousePos.y}px, #a855f7, #3b82f6, black 80%)`
+                  : 'black',
+                WebkitBackgroundClip: isHovered ? 'text' : 'none',
+                WebkitTextFillColor: isHovered ? 'transparent' : 'black',
+                backgroundClip: isHovered ? 'text' : 'none',
+              }}
+            >
+              fidelio.
+            </span>
           </a>
         </Link>
 

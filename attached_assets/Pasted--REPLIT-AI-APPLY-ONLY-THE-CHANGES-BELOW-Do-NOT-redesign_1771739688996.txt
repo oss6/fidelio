@@ -1,0 +1,144 @@
+# REPLIT AI — APPLY ONLY THE CHANGES BELOW
+
+Do NOT redesign.
+Do NOT change layout.
+Do NOT modify spacing.
+Do NOT adjust typography size.
+Only implement the exact behavior described.
+
+---
+
+## 1️⃣ “attention” and “vision” Hover Color Change (Precise Behavior)
+
+Target words:
+
+* `attention`
+* `vision`
+
+### Default State
+
+* Keep existing gradient styling exactly as is.
+* Do not change layout.
+* Do not add glow by default.
+
+### On Hover (IMPORTANT)
+
+When the cursor is inside the word:
+
+1. Replace the current warm gradient (pink/orange/purple tones)
+   WITH a cool-spectrum gradient only:
+
+   * Blue
+   * Green
+   * Yellow
+   * Aqua tones allowed
+   * No pink
+   * No orange
+   * No purple
+
+2. Add a glow effect that:
+
+   * Is soft and diffused
+   * Uses the same cool-spectrum colors
+   * Is subtle (not neon)
+   * 300ms ease transition
+
+3. The glow must:
+
+   * Apply to the entire word (not localized)
+   * Use text-shadow or blurred radial glow
+   * Not cause layout shift
+   * Not scale text
+   * Not change font weight
+
+4. On mouse leave:
+
+   * Smoothly transition back to original warm gradient
+   * Remove glow cleanly
+   * No flicker
+   * No flashing
+
+---
+
+## 2️⃣ “fidelio.” Logo — Cursor-Localized Glow Only (VERY SPECIFIC)
+
+Target: top-left logo text “fidelio.”
+
+### Default State
+
+* Solid black
+* No gradient
+* No glow
+
+### On Hover
+
+Glow must behave differently than headline words.
+
+Requirements:
+
+* Glow appears ONLY under the cursor area
+* Approximate circular radius: 10px–20px
+* The rest of the logo remains black
+* The entire word does NOT change color
+* Only the hovered region shows glow
+
+Implementation Requirements:
+
+* Track cursor position inside the logo element
+* Use radial-gradient mask tied to cursor coordinates
+* Apply localized gradient overlay
+* Clip effect inside text using:
+
+  * background-clip: text
+  * -webkit-background-clip: text
+  * color: transparent (only for masked region)
+* No box glow
+* No full-word glow
+* No scaling
+* No layout shift
+* 300ms smooth transition
+
+Effect should feel like:
+A small colored light is passing under the letters.
+
+Not a full gradient fill.
+Not a full text glow.
+
+---
+
+## 3️⃣ Increase Blob Visibility (Reduce Blur)
+
+Hero background blobs:
+
+Current issue:
+They are too blurred and not visible enough.
+
+Adjust:
+
+* Reduce blur intensity
+
+  * From ~100px range
+  * To ~40–60px range
+* Increase opacity slightly (but still subtle)
+* Do not increase saturation drastically
+* Do not change animation movement
+* Do not resize blobs
+* Do not add new blobs
+
+Goal:
+Blobs should feel more present and dimensional,
+but still soft and premium.
+
+---
+
+## Constraints
+
+* Do NOT alter hero alignment.
+* Do NOT modify navigation.
+* Do NOT resize headline.
+* Do NOT change section spacing.
+* Only apply the three updates above.
+
+---
+
+Implement clean, structured CSS and cursor-based animation logic only.

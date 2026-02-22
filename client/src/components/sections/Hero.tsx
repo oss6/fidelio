@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const FloatingBlob = ({ color, initialX, initialY, duration, delay }: { color: string, initialX: string, initialY: string, duration: number, delay: number }) => (
   <motion.div
-    className="absolute rounded-full blur-[100px] opacity-40 mix-blend-screen pointer-events-none"
+    className="absolute rounded-full blur-[50px] opacity-50 mix-blend-screen pointer-events-none"
     style={{
       background: `radial-gradient(circle at center, ${color}, transparent)`,
       width: '400px',
@@ -24,53 +23,6 @@ const FloatingBlob = ({ color, initialX, initialY, duration, delay }: { color: s
     }}
   />
 );
-
-const InteractiveWord = ({ children, className, dataText }: { children: React.ReactNode, className?: string, dataText?: string }) => {
-  const ref = useRef<HTMLSpanElement>(null);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 100, damping: 20 });
-  const springY = useSpring(mouseY, { stiffness: 100, damping: 20 });
-  const isHovered = useMotionValue(0);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    mouseX.set(e.clientX - rect.left);
-    mouseY.set(e.clientY - rect.top);
-  };
-
-  return (
-    <span 
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => isHovered.set(1)}
-      onMouseLeave={() => isHovered.set(0)}
-      className={`relative inline-block ${className}`}
-      data-text={dataText}
-      style={{
-        transition: 'text-shadow 0.3s ease'
-      } as any}
-    >
-      <motion.span
-        className="absolute inset-0 pointer-events-none z-10"
-        style={{
-          background: `radial-gradient(circle 60px at var(--mouse-x) var(--mouse-y), rgba(34, 197, 94, 0.5), rgba(59, 130, 246, 0.5), rgba(234, 179, 8, 0.4), transparent)`,
-          opacity: isHovered,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          transition: 'opacity 0.3s ease',
-          '--mouse-x': springX.set + 'px',
-          '--mouse-y': springY.set + 'px'
-        } as any}
-      >
-        {children}
-      </motion.span>
-      {children}
-    </span>
-  );
-};
 
 export default function Hero() {
   const scrollToPricing = () => {
@@ -109,14 +61,16 @@ export default function Hero() {
 
             <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black text-left">
               Capture{" "}
-              <InteractiveWord className="liquid-glass-text animate-gradient-text cursor-default" dataText="attention">
+              <span className="liquid-glass-text animate-gradient-text cursor-default cool-hover" data-text="attention">
                 attention
-              </InteractiveWord>. <br />
+              </span>. <br />
               Grow your{" "}
-              <InteractiveWord className="vision-gradient transition-premium hover-glow group-hover:animate-gradient-text cursor-default">
-                vision
-              </InteractiveWord>
-              .
+              <span className="relative inline-block group cursor-default">
+                <span className="vision-gradient transition-premium group-hover:animate-gradient-text cool-hover">
+                  vision
+                </span>
+                .
+              </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-[#737373] max-w-xl leading-relaxed font-light text-left">
