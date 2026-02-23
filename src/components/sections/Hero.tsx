@@ -46,7 +46,7 @@ export default function Hero() {
           width={520}
           style={{ top: -120, right: -140 }}
           animate={{ rotate: [-10, 10, -10] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
 
         {/* Bottom-right, pulled further in for balance */}
@@ -57,7 +57,7 @@ export default function Hero() {
           width={650}
           style={{ bottom: 0, right: -100 }}
           animate={{ rotate: [10, -10, 10] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
 
         {/* Center-left, anchoring the midfield */}
@@ -68,7 +68,7 @@ export default function Hero() {
           width={500}
           style={{ top: "5%", right: "22%" }}
           animate={{ rotate: [-8, 8, -8] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
 
         {/* Upper-center, subtle overlap with blob1 for depth */}
@@ -79,7 +79,7 @@ export default function Hero() {
           width={320}
           style={{ bottom: 140, right: "36%" }}
           animate={{ rotate: [8, -8, 8] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
