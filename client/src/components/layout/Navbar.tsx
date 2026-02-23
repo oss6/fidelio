@@ -58,25 +58,35 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
-          <a 
+          <a
             ref={logoRef}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="relative text-2xl md:text-3xl font-bold tracking-tight font-display text-black overflow-hidden py-1"
+            className="relative text-2xl md:text-3xl font-bold tracking-tight font-display py-1"
           >
-            <span 
-              className="relative z-10 transition-colors duration-300"
-              style={{
-                background: isHovered 
-                  ? `radial-gradient(circle 20px at ${mousePos.x}px ${mousePos.y}px, #a855f7, #3b82f6, black 80%)`
-                  : 'black',
-                WebkitBackgroundClip: isHovered ? 'text' : 'none',
-                WebkitTextFillColor: isHovered ? 'transparent' : 'black',
-                backgroundClip: isHovered ? 'text' : 'none',
-              }}
-            >
-              fidelio.
+            <span className="relative block">
+              {/* Base black text */}
+              <span className="text-black">
+                fidelio.
+              </span>
+
+              {/* Gradient spotlight — absolutely overlaid on top */}
+              <span
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: "linear-gradient(90deg, #a855f7, #3b82f6)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  maskImage: `radial-gradient(circle 70px at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 70%)`,
+                  WebkitMaskImage: `radial-gradient(circle 70px at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 70%)`,
+                  opacity: isHovered ? 1 : 0,
+                  transition: "opacity 0.15s ease",
+                }}
+              >
+                fidelio.
+              </span>
             </span>
           </a>
         </Link>

@@ -112,8 +112,38 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
+/* Seamless Shimmer Animation */
+@keyframes shimmer-slide {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  100% { 
+    /* Moving to -200% pulls the background left, making the colors flow right */
+    background-position: -200% 50%; 
+  }
+}
+
+.shimmer-text-effect {
+  /* The gradient repeats the first color (#3b82f6) at the end for a seamless loop */
+  background: linear-gradient(
+    90deg, 
+    #3b82f6 0%, 
+    #a855f7 25%, 
+    #ec4899 50%, 
+    #f97316 75%, 
+    #3b82f6 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer-slide 5s linear infinite;
+  display: inline-block;
+}
+
 /* Cool Hover Behavior for attention/vision */
-.cool-hover {
+/* .cool-hover {
   transition: all 300ms ease !important;
 }
 
@@ -122,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   text-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(20, 184, 166, 0.2) !important;
-}
+} */
 
 /* Gradient Text Animation */
 @keyframes gradientMove {
@@ -146,25 +176,60 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Button System */
 .btn-unified {
-  @apply transition-all duration-300 ease-out hover:scale-[1.03] border-0;
+  cursor: pointer;
+  @apply transition-transform duration-300 ease-out border-0;
+  position: relative;
+  background: #000;
+  color: white;
+  overflow: hidden;
+  z-index: 0; /* create stacking context */
+}
+
+.btn-unified::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #f97316, #ec4899);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  z-index: -1; /* put gradient behind text */
 }
 
 .btn-unified:hover {
-  background: linear-gradient(to right, #f97316, #ec4899); /* Default warm */
-  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.5);
-  color: white;
+  transform: scale(1.03);
+}
+
+.btn-unified:hover::before {
+  opacity: 1;
 }
 
 .btn-unified-cool {
-  @apply border border-black bg-transparent text-black;
-  transition: all 300ms ease;
+  cursor: pointer;
+  @apply border border-black bg-transparent text-black relative overflow-hidden;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  z-index: 0; /* stacking context for pseudo-element */
+}
+
+.btn-unified-cool::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  z-index: -1; /* place gradient behind text */
+  border-radius: inherit; /* match button rounding */
 }
 
 .btn-unified-cool:hover {
-  background: linear-gradient(to right, #3b82f6, #a855f7);
+  transform: scale(1.03);
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
-  color: white;
   border-color: transparent;
+  color: white;
+}
+
+.btn-unified-cool:hover::before {
+  opacity: 1;
 }
 
 /* Light Elevated Section Backgrounds */

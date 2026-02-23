@@ -34,17 +34,53 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden border-b border-slate-200">
       {/* Floating Blobs Background */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <FloatingBlob color="#a855f7" initialX="10%" initialY="20%" duration={20} delay={0} />
-        <FloatingBlob color="#ec4899" initialX="60%" initialY="15%" duration={25} delay={-5} />
-        <FloatingBlob color="#f97316" initialX="20%" initialY="60%" duration={22} delay={-10} />
-        <FloatingBlob color="#3b82f6" initialX="70%" initialY="70%" duration={28} delay={-15} />
-        <FloatingBlob color="#14b8a6" initialX="40%" initialY="40%" duration={30} delay={-2} />
-        
-        {/* Grain Texture Overlay */}
-        <div className="absolute inset-0 opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none z-0 bg-white">
+
+        {/* Top-right corner blob */}
+        <motion.img
+          src="/blob1.png"
+          alt="Background blob"
+          className="absolute object-cover pointer-events-none"
+          width={520}
+          style={{ top: -120, right: -140 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        />
+
+        {/* Bottom-right, pulled further in for balance */}
+        <motion.img
+          src="/blob2.png"
+          alt="Background blob"
+          className="absolute object-cover pointer-events-none"
+          width={650}
+          style={{ bottom: 0, right: -100 }}
+          animate={{ rotate: -360 }}
+          transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
+        />
+
+        {/* Center-left, anchoring the midfield */}
+        <motion.img
+          src="/blob3.png"
+          alt="Background blob"
+          className="absolute object-cover pointer-events-none"
+          width={500}
+          style={{ top: "5%", right: "22%" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
+        />
+
+        {/* Upper-center, subtle overlap with blob1 for depth */}
+        <motion.img
+          src="/blob4.png"
+          alt="Background blob"
+          className="absolute object-cover pointer-events-none"
+          width={320}
+          style={{ bottom: 140, right: "36%" }}
+          animate={{ rotate: -360 }}
+          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+        />
       </div>
 
       <div className="container px-6 mx-auto relative z-10">
@@ -61,12 +97,12 @@ export default function Hero() {
 
             <h1 className="text-6xl md:text-8xl lg:text-[100px] font-bold tracking-tight leading-[0.9] text-black text-left">
               Capture{" "}
-              <span className="liquid-glass-text animate-gradient-text cursor-default cool-hover" data-text="attention">
+              <span className="shimmer-text-effect cursor-default">
                 attention
               </span>. <br />
               Grow your{" "}
               <span className="relative inline-block group cursor-default">
-                <span className="vision-gradient transition-premium group-hover:animate-gradient-text cool-hover">
+                <span className="shimmer-text-effect">
                   vision
                 </span>
                 .
@@ -88,7 +124,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="btn-unified btn-unified-cool h-16 px-10 text-lg rounded-full"
+                className="btn-unified-cool h-16 px-10 text-lg rounded-full"
                 onClick={scrollToPricing}
               >
                 View Plans
