@@ -1,28 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-const FloatingBlob = ({ color, initialX, initialY, duration, delay }: { color: string, initialX: string, initialY: string, duration: number, delay: number }) => (
-  <motion.div
-    className="absolute rounded-full blur-[50px] opacity-50 mix-blend-screen pointer-events-none"
-    style={{
-      background: `radial-gradient(circle at center, ${color}, transparent)`,
-      width: '400px',
-      height: '400px',
-      left: initialX,
-      top: initialY,
-    }}
-    animate={{
-      x: [0, 50, -30, 0],
-      y: [0, -40, 60, 0],
-    }}
-    transition={{
-      duration: duration,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: delay,
-    }}
-  />
-);
+import blob1 from "@/assets/blob1.png";
+import blob2 from "@/assets/blob2.png";
+import blob3 from "@/assets/blob3.png";
+import blob4 from "@/assets/blob4.png";
 
 export default function Hero() {
   const scrollToPricing = () => {
@@ -40,7 +21,7 @@ export default function Hero() {
 
         {/* Top-right corner blob */}
         <motion.img
-          src="/blob1.png"
+          src={blob1}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
           width={520}
@@ -51,7 +32,7 @@ export default function Hero() {
 
         {/* Bottom-right, pulled further in for balance */}
         <motion.img
-          src="/blob2.png"
+          src={blob2}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
           width={650}
@@ -62,7 +43,7 @@ export default function Hero() {
 
         {/* Center-left, anchoring the midfield */}
         <motion.img
-          src="/blob3.png"
+          src={blob3}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
           width={500}
@@ -73,7 +54,7 @@ export default function Hero() {
 
         {/* Upper-center, subtle overlap with blob1 for depth */}
         <motion.img
-          src="/blob4.png"
+          src={blob4}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
           width={320}
