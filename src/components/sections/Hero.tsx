@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden border-b border-slate-200">
       {/* Floating Blobs Background */}
-      <div className="absolute inset-0 pointer-events-none z-0 bg-white">
+      <div className="absolute inset-0 pointer-events-none z-0 bg-white hidden [@media(min-width:1420px)]:block">
 
         {/* Top-right corner blob */}
         <motion.img
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Bottom-right, pulled further in for balance */}
+        {/* Bottom-right */}
         <motion.img
           src={blob2}
           alt="Background blob"
@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Center-left, anchoring the midfield */}
+        {/* Center-left */}
         <motion.img
           src={blob3}
           alt="Background blob"
@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Upper-center, subtle overlap with blob1 for depth */}
+        {/* Upper-center */}
         <motion.img
           src={blob4}
           alt="Background blob"
