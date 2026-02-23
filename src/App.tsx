@@ -10,7 +10,7 @@ import TermsOfService from "@/pages/terms";
 
 function AppRouter() {
   return (
-    <Router base="/fidelio">
+    <Router>
       <Switch >
         <Route path="/" component={Home} />
         <Route path="/privacy" component={PrivacyPolicy} />
