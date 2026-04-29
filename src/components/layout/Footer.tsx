@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-widest text-black">Company</h4>
               <ul className="space-y-2 text-sm text-[#737373]">
@@ -39,7 +39,24 @@ export default function Footer() {
               <ul className="space-y-2 text-sm text-[#737373]">
                 <li><Link href="/privacy" className="hover:text-black transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-black transition-colors">Terms of Service</Link></li>
-                <li><a href="mailto:filmfidelis@gmail.com" className="hover:text-black transition-colors">Contact</a></li>
+                <li><Link href="/refund-policy" className="hover:text-black transition-colors">Refund Policy</Link></li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-black">Contact</h4>
+              <ul className="space-y-2 text-sm text-[#737373]">
+                <li>6 Brompton Pool Road</li>
+                <li>B28 0SH, Birmingham, UK</li>
+                <li>
+                  <a href="mailto:filmfidelis@gmail.com" className="hover:text-black transition-colors">
+                    filmfidelis@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+447476710442" className="hover:text-black transition-colors">
+                    +44 7476710442
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -50,6 +67,7 @@ export default function Footer() {
           <div className="flex gap-8 text-[#737373]">
             <Link href="/privacy" className="hover:text-black transition-colors uppercase">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-black transition-colors uppercase">Terms of Service</Link>
+            <Link href="/refund-policy" className="hover:text-black transition-colors uppercase">Refund Policy</Link>
           </div>
         </div>
       </div>

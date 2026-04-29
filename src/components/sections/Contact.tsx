@@ -90,7 +90,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
+                        <Input placeholder="John Doe" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-4 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -103,7 +103,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-black font-bold uppercase text-xs tracking-widest">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
+                        <Input placeholder="john@brand.com" {...field} className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-4 h-12 focus-visible:ring-0 focus-visible:border-black transition-premium" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -118,7 +118,7 @@ export default function Contact() {
                       <FormControl>
                         <Textarea 
                           placeholder="Tell us about your needs..." 
-                          className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-0 min-h-[100px] focus-visible:ring-0 focus-visible:border-black transition-premium resize-none" 
+                          className="bg-transparent border-0 border-b border-[#E5E4E2] rounded-none px-4 min-h-[100px] focus-visible:ring-0 focus-visible:border-black transition-premium resize-none" 
                           {...field} 
                         />
                       </FormControl>

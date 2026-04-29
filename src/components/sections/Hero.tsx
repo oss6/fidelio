@@ -17,15 +17,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden border-b border-slate-200">
       {/* Floating Blobs Background */}
-      <div className="absolute inset-0 pointer-events-none z-0 bg-white hidden [@media(min-width:1420px)]:block">
+      <div className="absolute inset-0 pointer-events-none z-0 bg-white hidden [@media(min-width:1420px)_and_(min-height:560px)]:block">
 
         {/* Top-right corner blob */}
         <motion.img
           src={blob1}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
-          width={520}
-          style={{ top: -120, right: -140 }}
+          style={{ width: "min(520px, 58vh)", top: -120, right: -140 }}
           animate={{ rotate: [-10, 10, -10] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -35,8 +34,7 @@ export default function Hero() {
           src={blob2}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
-          width={650}
-          style={{ bottom: 0, right: -100 }}
+          style={{ width: "min(650px, 72vh)", bottom: 0, right: -100 }}
           animate={{ rotate: [10, -10, 10] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -46,8 +44,7 @@ export default function Hero() {
           src={blob3}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
-          width={500}
-          style={{ top: "5%", right: "22%" }}
+          style={{ width: "min(500px, 56vh)", top: "5%", right: "22%" }}
           animate={{ rotate: [-8, 8, -8] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -57,8 +54,7 @@ export default function Hero() {
           src={blob4}
           alt="Background blob"
           className="absolute object-cover pointer-events-none"
-          width={320}
-          style={{ bottom: 140, right: "36%" }}
+          style={{ width: "min(320px, 36vh)", bottom: 140, right: "36%" }}
           animate={{ rotate: [8, -8, 8] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />

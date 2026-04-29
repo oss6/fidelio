@@ -40,7 +40,13 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-xl font-bold mb-4 font-display">7. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at: <span className="font-bold">filmfidelis@gmail.com</span></p>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul className="mt-4 space-y-1">
+              <li><span className="font-bold">fidelio.</span></li>
+              <li>6 Brompton Pool Road, B28 0SH, Birmingham, UK</li>
+              <li>Email: <a href="mailto:filmfidelis@gmail.com" className="font-bold hover:underline">filmfidelis@gmail.com</a></li>
+              <li>Phone: <a href="tel:+447476710442" className="font-bold hover:underline">+44 7476710442</a></li>
+            </ul>
           </section>
         </div>
 

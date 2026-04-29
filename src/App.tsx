@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import PrivacyPolicy from "@/pages/privacy";
 import TermsOfService from "@/pages/terms";
+import RefundPolicy from "@/pages/refund-policy";
 
 function AppRouter() {
   return (
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="/" component={Home} />
         <Route path="/privacy" component={PrivacyPolicy} />
         <Route path="/terms" component={TermsOfService} />
+        <Route path="/refund-policy" component={RefundPolicy} />
         <Route component={NotFound} />
       </Switch>
     </Router>

@@ -20,7 +20,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-bold mb-4 font-display">3. Payment Terms</h2>
-            <p>Services are billed on a subscription or project basis. Payments are due in advance of service delivery unless otherwise agreed in writing. All fees are non-refundable unless specified in our refund policy.</p>
+            <p>Services are billed on a subscription or project basis. Payments are due in advance of service delivery unless otherwise agreed in writing. All fees are non-refundable unless specified in our <Link href="/refund-policy" className="font-bold hover:underline">Refund &amp; Cancellation Policy</Link>.</p>
           </section>
 
           <section>
@@ -50,7 +50,13 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-bold mb-4 font-display">9. Contact Us</h2>
-            <p>For any questions regarding these terms, please contact us at: <span className="font-bold">filmfidelis@gmail.com</span></p>
+            <p>For any questions regarding these terms, please contact us:</p>
+            <ul className="mt-4 space-y-1">
+              <li><span className="font-bold">fidelio.</span></li>
+              <li>6 Brompton Pool Road, B28 0SH, Birmingham, UK</li>
+              <li>Email: <a href="mailto:filmfidelis@gmail.com" className="font-bold hover:underline">filmfidelis@gmail.com</a></li>
+              <li>Phone: <a href="tel:+447476710442" className="font-bold hover:underline">+44 7476710442</a></li>
+            </ul>
           </section>
         </div>
 
